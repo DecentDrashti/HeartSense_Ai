@@ -1,5 +1,6 @@
-pandas
-numpy
-streamlite
 flask
+gunicorn
+numpy
+pandas
+scikit-learn
 joblib
