@@ -61,7 +61,7 @@ Check out HeartSense AI :
     
   Helps users understand actionable steps to prevent heart disease or maintain healthy hearts.
 
-🔍 Model Transparency
+### 🔍 Model Transparency
 
   Complete visibility into the data preprocessing steps.
   
@@ -69,7 +69,7 @@ Check out HeartSense AI :
   
   Ensures users understand why a risk is classified as high or low.
 
-📝 Notes
+###📝 Notes
 
   This project is for educational purposes only.
   
