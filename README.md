@@ -53,7 +53,7 @@ Python, Flask, HTML, CSS, Tailwind CSS, JS, Scikit-learn, Pandas, NumPy, Joblib,
 ## 🌐 Live Demo
 
 Check out HeartSense AI :
-  (HeartSense AI)[https://heartsense-ai-2sey.onrender.com/]
+  [HeartSense AI](https://heartsense-ai-2sey.onrender.com/)
 
 ## 👨‍⚕️ Health Guidance Feature
 
