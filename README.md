@@ -69,7 +69,7 @@ Check out HeartSense AI :
   
   Ensures users understand why a risk is classified as high or low.
 
-###📝 Notes
+### 📝 Notes
 
   This project is for educational purposes only.
   
