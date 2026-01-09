@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeartSense AI | Model Transparency</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,6 +15,11 @@
             <div class="heartbeat text-primary text-2xl">❤️</div>
             <span class="font-bold tracking-tight">HeartSense AI</span>
         </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -32,8 +37,9 @@
                 class="inline-block py-1 px-4 rounded-full bg-red-100 text-red-600 text-xs font-bold uppercase tracking-widest mb-4">Deep
                 Transparency</span>
             <h1 class="text-5xl font-black mb-4">Neural Architecture & Ethics</h1>
-            <p class="text-xl text-secondary max-w-2xl mx-auto">Understanding how HeartSense AI interprets clinical data
-                through our medical-grade ML pipeline.</p>
+            <p class="text-xl text-secondary max-w-2xl mx-auto">A deep look into the Dataset, Preprocessing Pipeline,
+                and the logic
+                of the Decision Tree Classifier.</p>
         </header>
 
         <!-- Pipeline Visual Flow -->
@@ -91,7 +97,7 @@
                             class="bg-primary border-4 border-white rounded-3xl p-6 text-center shadow-xl transform scale-105">
                             <div class="text-3xl mb-3">🤖</div>
                             <h4 class="font-bold text-sm mb-2 text-white">Prediction</h4>
-                            <p class="text-[10px] text-primary-light">RF Classifier Ensemble</p>
+                            <p class="text-[10px] text-primary-light">Decision Tree Classifier</p>
                         </div>
                         <div class="mt-4 hidden md:flex justify-center">
                             <div
@@ -112,25 +118,25 @@
                         <div class="flex justify-between items-center mb-2">
                             <span class="text-xs font-bold uppercase tracking-widest text-red-400">Raw Data
                                 Retention</span>
-                            <span class="text-sm font-black">70,000 → 68,230 Rows</span>
+                            <span class="text-sm font-black">70,000 → 68,748 Rows</span>
                         </div>
                         <div class="w-full bg-red-50 h-3 rounded-full overflow-hidden">
-                            <div class="bg-primary h-full rounded-full" style="width: 97%"></div>
+                            <div class="bg-primary h-full rounded-full" style="width: 98%"></div>
                         </div>
-                        <p class="text-[10px] text-gray-400 mt-2">Integrity Check: ~2.5% of data discarded due to
+                        <p class="text-[10px] text-gray-400 mt-2">Integrity Check: ~1.8% of data discarded due to
                             clinical outliers in BP readings.</p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-6 bg-pink-50/30 p-6 rounded-[2rem]">
                         <div>
-                            <div class="text-xs font-bold text-gray-400 uppercase mb-1">Before Cleaning</div>
-                            <div class="text-2xl font-black text-gray-500">12 Features</div>
-                            <p class="text-[10px] mt-1">Raw diagnostic signals</p>
+                            <div class="text-xs font-bold text-gray-400 uppercase mb-1">Feature Engineering</div>
+                            <div class="text-2xl font-black text-gray-500">13 Features</div>
+                            <p class="text-[10px] mt-1">Demos, Vitals, Lifestyle</p>
                         </div>
                         <div class="border-l border-pink-100 pl-6">
-                            <div class="text-xs font-bold text-primary uppercase mb-1">After Scaling</div>
-                            <div class="text-2xl font-black text-primary">11 Vectors</div>
-                            <p class="text-[10px] mt-1 text-primary-dark">Optimized for Forest Search</p>
+                            <div class="text-xs font-bold text-primary uppercase mb-1">Normalized State</div>
+                            <div class="text-2xl font-black text-primary">12 Vectors</div>
+                            <p class="text-[10px] mt-1 text-primary-dark">Optimized for Decision Tree</p>
                         </div>
                     </div>
                 </div>
@@ -138,27 +144,30 @@
 
             <div class="card p-10 bg-slate-900 border-none text-white overflow-hidden relative">
                 <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                <h3 class="text-2xl font-black mb-6 relative z-10">Why Decision Tree?</h3>
+                <h3 class="text-2xl font-black mb-6 relative z-10">Interpretability over Complexity</h3>
                 <p class="text-slate-400 text-sm leading-relaxed mb-8 relative z-10">
-                    We utilize a **Decision Tree Classifier** because heart disease is rarely the result of a single
-                    factor. Forest Ensembles excel at capturing the "Voting" power of multiple decision trees,
-                    providing:
+                    During the research phase, we evaluated high-performance <strong>"Ensemble"</strong> methods (like
+                    Random Forest) and
+                    Neural Networks. However, for a medical screening tool, <strong>Explainable AI (XAI)</strong> is
+                    paramount. We
+                    chose a Single Decision Tree for the following academic reasons:
                 </p>
                 <div class="space-y-4 relative z-10">
                     <div class="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
                         <div class="text-xl">🌳</div>
                         <div>
-                            <h4 class="text-sm font-bold">Feature Explainability</h4>
-                            <p class="text-[10px] text-slate-500">We can see which factors (like BP) had the most
-                                impact.</p>
+                            <h4 class="text-sm font-bold">Traceable Decision Paths</h4>
+                            <p class="text-[10px] text-slate-500">The model follows a hierarchy of binary decisions
+                                (e.g., BP > 140?), mimicking clinical flowcharts used by doctors.</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
-                        <div class="text-xl">🛡️</div>
+                        <div class="text-xl">⚖️</div>
                         <div>
-                            <h4 class="text-sm font-bold">Overfitting Shield</h4>
-                            <p class="text-[10px] text-slate-500">Aggregates 100+ trees to ensure stability in
-                                predictions.</p>
+                            <h4 class="text-sm font-bold">The Accuracy-Safety Trade-off</h4>
+                            <p class="text-[10px] text-slate-500">While black-box models may offer slightly higher
+                                accuracy, a 1% gain is not worth losing the ability to explain "why" a patient is at
+                                risk.</p>
                         </div>
                     </div>
                 </div>
@@ -179,8 +188,8 @@
                 </div>
             </div>
             <p class="text-secondary text-sm max-w-xl mx-auto italic">
-                Our model "learned" heart patterns from 54,000+ patients and was strictly validated against 13,000+
-                unseen cases to ensure real-world reliability.
+                Our model learned heart patterns from 56,250 patients and was strictly validated against 13,750 unseen
+                cases (based on confusion matrix summation) to ensure real-world reliability.
             </p>
         </section>
     </main>
@@ -190,7 +199,7 @@
         <p>&copy; 2026 HeartSense AI. A Transparent Intelligence Project.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

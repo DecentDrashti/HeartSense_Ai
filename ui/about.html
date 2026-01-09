@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeartSense AI | About</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,6 +15,11 @@
             <div class="heartbeat text-primary text-2xl">❤️</div>
             <span class="font-bold tracking-tight">HeartSense AI</span>
         </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About</a>
@@ -29,22 +34,26 @@
     <main class="main-content">
         <header class="mb-16 text-center animate-fade-in">
             <h1 class="text-5xl font-black mb-4">Our Vision</h1>
-            <p class="text-xl text-secondary max-w-2xl mx-auto">Leveraging Deep Learning to empower predictive
-                cardiovascular health for everyone.</p>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">Bridging the gap between clinical data and preventive
+                cardiology through transparent, interpretable machine learning architectures.</p>
         </header>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 items-center">
             <div>
-                <h2 class="text-3xl font-black mb-6 text-gray-900 border-l-8 border-primary pl-6">The Crisis of Care
-                </h2>
+                <h2 class="text-3xl font-black mb-6 text-gray-900 border-l-8 border-primary pl-6">Understanding the
+                    Silent Threat</h2>
                 <p class="text-secondary text-lg leading-relaxed mb-6">
-                    Cardiovascular disease remains the world's leading silent threat. Traditional diagnostic routes are
-                    often reactive—triggered only after symptoms appear. **HeartSense AI** was born from the belief that
-                    medicine should be preemptive.
+                    Cardiovascular Disease (CVD) refers to a group of disorders of the heart and blood vessels—including
+                    coronary heart disease and hypertension. As the leading cause of mortality globally, the primary
+                    challenge is that CVD often develops silently, with major events like heart attacks occurring
+                    without prior warning symptoms.
                 </p>
                 <p class="text-secondary text-lg leading-relaxed">
-                    By utilizing clinical data patterns from tens of thousands of anonymized patients, our system
-                    identifies risk signatures long before they manifest as critical events.
+                    <strong>HeartSense AI</strong> addresses this by shifting the paradigm from reactive treatment to
+                    proactive risk
+                    assessment. By training on a diverse dataset of 68,748 patient records, our model identifies subtle
+                    correlations between vitals (BP, Cholesterol) and lifestyle habits to project risk trajectories long
+                    before clinical intervention becomes urgent.
                 </p>
             </div>
             <div class="relative">
@@ -60,43 +69,46 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="text-center">
                     <div class="text-4xl mb-4">🧬</div>
-                    <h4 class="text-xl font-bold mb-3">Explainability First</h4>
-                    <p class="text-sm text-secondary">We don't just provide a score. We show you the "why" behind the
-                        AI's logic, making black-box medical models a thing of the past.</p>
+                    <h4 class="text-xl font-bold mb-3">Interpretable Logic</h4>
+                    <p class="text-sm text-secondary">Unlike "black-box" neural networks, we use a Decision Tree to
+                        ensure every risk assessment is traceable, logical, and explainable to both clinicians and
+                        patients.</p>
                 </div>
                 <div class="text-center">
                     <div class="text-4xl mb-4">🔬</div>
-                    <h4 class="text-xl font-bold mb-3">Research Grade</h4>
-                    <p class="text-sm text-secondary">Trained on the globally recognized UCI Heart Disease dataset,
-                        ensuring our benchmarks meet international scientific standards.</p>
+                    <h4 class="text-xl font-bold mb-3">Clinical Integrity</h4>
+                    <p class="text-sm text-secondary">Our system is benchmarked against the UCI Heart Disease
+                        repository, utilizing standardized physiological markers to ensure results align with academic
+                        research.</p>
                 </div>
                 <div class="text-center">
                     <div class="text-4xl mb-4">🤝</div>
-                    <h4 class="text-xl font-bold mb-3">Human-Centric</h4>
-                    <p class="text-sm text-secondary">Our interface is designed to reduce medical anxiety, providing
-                        calm, actionable guidance instead of alarming jargon.</p>
+                    <h4 class="text-xl font-bold mb-3">Decision Support</h4>
+                    <p class="text-sm text-secondary">HeartSense AI is designed to augment, not replace, medical
+                        expertise. It serves as a preliminary screening tool to prioritize patients who need immediate
+                        clinical review.</p>
                 </div>
             </div>
         </section>
 
-        <section class="bg-primary rounded-[3rem] p-12 text-white text-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <section class="bg-white border-2 border-pink-100 rounded-[3rem] p-12 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 pointer-events-none">
                 <svg width="100%" height="100%" viewBox="0 0 100 100">
-                    <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="white" stroke-width="2" />
+                    <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="#ef4444" stroke-width="2" />
                 </svg>
             </div>
-            <h3 class="text-3xl font-black mb-6 relative z-10">Protecting Hearts Globally</h3>
-            <p class="text-primary-light max-w-2xl mx-auto text-lg mb-8 relative z-10">
+            <h3 class="text-3xl font-black mb-6 relative z-10 text-slate-900">Protecting Hearts Globally</h3>
+            <p class="text-slate-600 max-w-2xl mx-auto text-lg mb-8 relative z-10">
                 HeartSense AI is an open-initiative project aimed at proving that accessible AI can save lives through
                 early detection and informed lifestyle choices.
             </p>
             <div class="flex justify-center gap-4 relative z-10">
                 <div
-                    class="px-6 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/20">
-                    70k+ Patient Data</div>
+                    class="px-6 py-2 bg-red-50 rounded-full text-xs font-bold uppercase tracking-widest border border-red-100 text-primary">
+                    Validated on 68k+ Records</div>
                 <div
-                    class="px-6 py-2 bg-white/10 rounded-full text-xs font-bold uppercase tracking-widest border border-white/20">
-                    90% Sensitivity</div>
+                    class="px-6 py-2 bg-red-50 rounded-full text-xs font-bold uppercase tracking-widest border border-red-100 text-primary">
+                    Clinical Decision Support</div>
             </div>
         </section>
     </main>
@@ -106,7 +118,7 @@
         <p>&copy; 2026 HeartSense AI. Knowledge is the best medicine.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

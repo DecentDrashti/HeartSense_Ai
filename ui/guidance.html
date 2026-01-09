@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeartSense AI | Health Guidance</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,6 +15,11 @@
             <div class="heartbeat text-primary text-2xl">❤️</div>
             <span class="font-bold tracking-tight">HeartSense AI</span>
         </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -29,8 +34,15 @@
     <main class="main-content">
         <header class="mb-16 text-center animate-fade-in">
             <h1 id="guidance-header" class="text-5xl font-black mb-4">Health Guidance</h1>
-            <p class="text-xl text-secondary max-w-2xl mx-auto">Science-backed recommendations for a resilient
-                cardiovascular system.</p>
+            <p class="text-xl text-secondary max-w-2xl mx-auto">Evidence-based lifestyle strategies supporting
+                cardiovascular resilience and long-term wellness.</p>
+            <div
+                class="mt-8 p-4 bg-amber-50 border border-amber-100 rounded-2xl max-w-2xl mx-auto text-[10px] text-amber-800 leading-relaxed">
+                <strong>MEDICAL DISCLAIMER:</strong> This AI-generated guidance is for educational and informational
+                purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always
+                seek the advice of your physician or other qualified health provider with any questions you may have
+                regarding a medical condition.
+            </div>
         </header>
 
         <!-- Dynamic Content: High/Medium Risk Profile -->
@@ -59,10 +71,11 @@
                                 class="w-10 h-10 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-black flex-shrink-0">
                                 01</div>
                             <div>
-                                <h4 class="text-lg font-bold mb-1">Daily Physical Activity</h4>
-                                <p class="text-secondary text-sm leading-relaxed">Engage in 20–30 minutes of light
-                                    walking or steady-state cardio. Avoid sudden, high-intensity exercise without prior
-                                    medical clearance to ensure your heart rate stays within safe clinical zones.</p>
+                                <h4 class="text-lg font-bold mb-1">DASH-Based Nutrition</h4>
+                                <p class="text-secondary text-sm leading-relaxed">Prioritize the Dietary Approaches to
+                                    Stop Hypertension (DASH) plan. Focus on reducing sodium intake below 2,300mg daily
+                                    while increasing potassium-rich foods like leafy greens and bananas to help regulate
+                                    vascular tension.</p>
                             </div>
                         </div>
                         <div class="flex gap-5">
@@ -70,10 +83,11 @@
                                 class="w-10 h-10 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-black flex-shrink-0">
                                 02</div>
                             <div>
-                                <h4 class="text-lg font-bold mb-1">Dietary Restructuring</h4>
-                                <p class="text-secondary text-sm leading-relaxed">Aggressively reduce sodium (salt) and
-                                    trans-fat (fried/processed foods) intake. Prioritize a DASH-style diet rich in leafy
-                                    greens, whole grains, and potassium to help regulate blood pressure naturally.</p>
+                                <h4 class="text-lg font-bold mb-1">Controlled Aerobic Activity</h4>
+                                <p class="text-secondary text-sm leading-relaxed">Engage in low-impact steady-state
+                                    cardio such as brisk walking for 30 minutes daily. Avoid high-intensity interval
+                                    training (HIIT) until cleared by a physician, as the model suggests a need for
+                                    stable heart rate management.</p>
                             </div>
                         </div>
                     </div>
@@ -161,18 +175,18 @@
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
                                 <span class="text-green-500 mt-1">✓</span>
-                                <span class="text-sm text-gray-700 font-medium">Maintain a balanced Mediterranean-style
-                                    diet including nuts and olive oil.</span>
+                                <span class="text-sm text-gray-700 font-medium">Adopt a Mediterranean-style diet
+                                    focusing on healthy unsaturated fats from nuts and olive oil.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span class="text-green-500 mt-1">✓</span>
-                                <span class="text-sm text-gray-700 font-medium">Keep your BMI within the optimal range
-                                    (18.5 – 24.9).</span>
+                                <span class="text-sm text-gray-700 font-medium">Maintain a Body Mass Index (BMI) within
+                                    the optimal clinical range (18.5 – 24.9).</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span class="text-green-500 mt-1">✓</span>
-                                <span class="text-sm text-gray-700 font-medium">Ensure at least 150 minutes of moderate
-                                    aerobic activity weekly.</span>
+                                <span class="text-sm text-gray-700 font-medium">Monitor and manage systemic inflammation
+                                    by prioritizing consistent sleep quality (7-9 hours).</span>
                             </li>
                         </ul>
                     </div>
@@ -224,7 +238,7 @@
         <p>&copy; 2026 HeartSense AI. Guidance is based on general clinical research standards.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
