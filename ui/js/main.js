@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            if (apHi >= 180) {
+            if (apHi >= 180 || apLo>=120) {
                 notifications.show({
                     title: "Hypertensive Emergency",
                     message: "Hypertensive emergency detected — immediate medical attention advised. Prediction is not appropriate for clinical crisis states.",
@@ -212,3 +212,4 @@ function displayResult(result) {
         resultHeart.classList.remove('text-green-500');
     }
 }
+
