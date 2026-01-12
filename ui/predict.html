@@ -51,7 +51,7 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1">Age (Years)</label>
-                            <input type="number" name="age" required
+                            <input type="number" name="age" required min="18" max="100"
                                 class="w-full p-2.5 bg-gray-50 rounded-xl border-none text-sm" placeholder="45">
                         </div>
                         <div>
@@ -66,12 +66,12 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1">Height (cm)</label>
-                            <input type="number" name="height" required
+                            <input type="number" name="height" required min="120" max="250"
                                 class="w-full p-2.5 bg-gray-50 rounded-xl border-none text-sm" placeholder="175">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1">Weight (kg)</label>
-                            <input type="number" name="weight" step="0.1" required
+                            <input type="number" name="weight" step="0.1" required min="40" max="180"
                                 class="w-full p-2.5 bg-gray-50 rounded-xl border-none text-sm" placeholder="70">
                         </div>
                     </div>
@@ -81,20 +81,20 @@
                             <span class="text-[10px] font-bold uppercase text-red-400">Blood Pressure</span>
                             <span class="text-[10px] text-gray-400 italic">Highly Critical</span>
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 gap-4">
                             <div>
                                 <label class="block text-[9px] font-bold uppercase text-gray-500 mb-1">Systolic
                                     (ap_hi)</label>
                                 <input type="number" name="ap_hi" required
                                     class="w-full p-2.5 bg-white rounded-xl border-none text-sm shadow-sm"
-                                    placeholder="120">
+                                    placeholder="Normal: 120 (Range: 85-180)">
                             </div>
                             <div>
                                 <label class="block text-[9px] font-bold uppercase text-gray-500 mb-1">Diastolic
                                     (ap_lo)</label>
                                 <input type="number" name="ap_lo" required
                                     class="w-full p-2.5 bg-white rounded-xl border-none text-sm shadow-sm"
-                                    placeholder="80">
+                                    placeholder="Normal: 80 (Range: 50-120)">
                             </div>
                         </div>
                     </div>
@@ -263,6 +263,7 @@
         <p>&copy; 2026 HeartSense AI. Data is processed locally for privacy.</p>
     </footer>
 
+    <script src="js/notifications.js"></script>
     <script src="js/main.js"></script>
 </body>
 

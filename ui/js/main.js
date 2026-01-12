@@ -15,6 +15,42 @@ document.addEventListener('DOMContentLoaded', () => {
         predictForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            // =====================
+            // Clinical Validation
+            // =====================
+            const apHi = Number(predictForm.ap_hi.value);
+            const apLo = Number(predictForm.ap_lo.value);
+
+            if (apLo >= apHi) {
+                notifications.show({
+                    title: "Blood Pressure Validation Alert",
+                    message: "Diastolic blood pressure must be LOWER than systolic blood pressure.",
+                    type: "critical"
+                });
+                return;
+            }
+
+            if (apHi >= 180) {
+                notifications.show({
+                    title: "Hypertensive Emergency",
+                    message: "Hypertensive emergency detected — immediate medical attention advised. Prediction is not appropriate for clinical crisis states.",
+                    type: "critical",
+                    duration: 6000
+                });
+                return;
+            }
+
+            if (apHi < 85 || apLo < 50) {
+                notifications.show({
+                    title: "Low Blood Pressure Warning",
+                    message: "Low blood pressure detected — prediction accuracy may be reduced as the model is optimized for hypertension risk.",
+                    type: "warning",
+                    duration: 6000
+                });
+            }
+
+
+
             const submitBtn = predictForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
 
@@ -82,7 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('API Error:', error);
                 document.getElementById('processing-state')?.classList.add('hidden');
                 document.getElementById('initial-state')?.classList.remove('hidden');
-                alert('Analysis failed. Please ensure the backend server (app.py) is running and accessible.');
+                notifications.show({
+                    title: "Analysis Failed",
+                    message: "Unable to connect to HeartSense Neural Engine. Please ensure the backend server is running.",
+                    type: "critical"
+                });
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
             }
